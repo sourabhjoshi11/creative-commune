@@ -1,0 +1,38 @@
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  mix-blend-mode: difference;
+  transition: width 0.2s ease, height 0.2s ease, transform 0.12s ease;
+}
+
+.ring.hover {
+  width: 60px;
+  height: 60px;
+  transform: translate(-30px, -30px) !important;
+}
+
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  mix-blend-mode: difference;
+}
+
+@media (pointer: coarse) {
+  .ring, .dot {
+    display: none;
+  }
+}
