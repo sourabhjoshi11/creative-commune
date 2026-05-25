@@ -58,12 +58,12 @@ export default function Contact() {
         <h2 className={styles.heading}>Let&apos;s Build Something Extraordinary</h2>
         <p className={styles.sub}>Tell us about your brand and goals. We&apos;ll craft a strategy that delivers.</p>
 
-        <div className={styles.tabs}>
+        {/* <div className={styles.tabs}>
           <button className={`${styles.tab} ${!showCalendly ? styles.tabActive : ''}`} onClick={() => setShowCalendly(false)}>Send a Message</button>
           <button className={`${styles.tab} ${showCalendly ? styles.tabActive : ''}`} onClick={() => setShowCalendly(true)}>Schedule a Call</button>
-        </div>
+        </div> */}
 
-        {!showCalendly ? (
+        {/* {!showCalendly ? (
           <form className={styles.form} onSubmit={onSubmit}>
             <div className={styles.row}>
               <input type="text" placeholder="Name *" value={form.name} onChange={update('name')} required className={styles.input} />
@@ -80,7 +80,7 @@ export default function Contact() {
             <textarea placeholder="Description" value={form.message} onChange={update('message')} rows={4} className={styles.input} />
             <button type="submit" className={styles.submit}>Send Message</button>
           </form>
-        ) : (
+        ) : ( */}
           <div className={styles.calendly}>
             <iframe
               src={`${process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com'}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=c9a84c`}
@@ -90,7 +90,7 @@ export default function Contact() {
               title="Schedule a call with Creative Commune"
             />
           </div>
-        )}
+        {/* )} */}
       </div>
     </section>
   );

@@ -69,4 +69,12 @@
 @media (max-width: 768px) {
   .links { display: none; }
   .nav { padding: 0 1.5rem; }
+  .logo { font-size: 1.1rem; }
+  .cta { font-size: 0.7rem; padding: 0.5rem 1rem; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 0.95rem; }
+  .cta { font-size: 0.65rem; padding: 0.45rem 0.8rem; }
+  .nav { padding: 0 1rem; height: 60px; }
 }
